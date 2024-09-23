@@ -1,0 +1,3 @@
+[submodule "Meta-Output-Predictor"]
+	path = Meta-Output-Predictor
+	url = https://github.com/haldunbalim/Meta-Output-Predictor.git
