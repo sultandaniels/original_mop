@@ -33,8 +33,7 @@ def main():
                         gradient_clip_algorithm=config.gradient_clip_algorithm,
                         gradient_clip_val=config.gradient_clip_val,
                         log_every_n_steps=50, max_epochs=config.num_epochs,
-                        gpus=torch.cuda.device_count(),
-                        strategy=DDPStrategy(find_unused_parameters=True))#i added the strategy line
+                        strategy=DDPStrategy(find_unused_parameters=True))#i added the strategy line #gpus=torch.cuda.device_count(),
     trainer.fit(model, datamodule=datamodule, ckpt_path=ckpt_path)
 
 
