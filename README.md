@@ -1,2 +1,10 @@
-# original_mop
-trying to recreate Upper triangular A phenomenon
+# Can Transformers Learn Optimal Filtering for Unknown Systems?
+
+The code accompanying our paper "Can Transformers Learn Optimal Filtering for Unknown Systems?" by Zhe Du*, Haldun Balim*, Samet Oymak, Necmiye Ozay.
+
+# Setup
+
+# Training
+
+# Creating Plots
+
