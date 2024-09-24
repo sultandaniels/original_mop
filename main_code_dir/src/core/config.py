@@ -11,7 +11,7 @@ from utils import set_seed
 
 class Config(object, metaclass=Singleton):
 
-    ckpt_path = '/Users/sultandaniels/Documents/Transformer_Kalman/original_mop/outputs/GPT2/240920_092855.24106f/checkpoints/step=25000.ckpt'
+    ckpt_path = '../outputs/GPT2/240920_092855.24106f/checkpoints/step=25000.ckpt'
     seed = 0
     fully_reproducible = False
 
