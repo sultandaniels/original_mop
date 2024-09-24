@@ -8,6 +8,8 @@ from models import GPT2
 from datasources import FilterDataset, DataModuleWrapper
 import os
 
+from pytorch_lightning.strategies import DDPStrategy #I added this line
+
 def main():
     logger = logging.getLogger(__name__)
     config = Config()
@@ -30,7 +32,9 @@ def main():
                         logger=loggers,
                         gradient_clip_algorithm=config.gradient_clip_algorithm,
                         gradient_clip_val=config.gradient_clip_val,
-                        log_every_n_steps=50, max_epochs=config.num_epochs) #gpus=torch.cuda.device_count()
+                        log_every_n_steps=50, max_epochs=config.num_epochs,
+                        gpus=torch.cuda.device_count()
+                        strategy=DDPStrategy(find_unused_parameters=True))#i added #
     trainer.fit(model, datamodule=datamodule, ckpt_path=ckpt_path)
 
 
